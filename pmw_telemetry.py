@@ -13,7 +13,7 @@ assert board != 1, "There's something wrong with the serial connection... check 
 
 fig, (p1, p2) = plt.subplots(2)
 
-for i in range(100):
+for i in range(25):
     try:
         telemetry = board.getData(MultiWii.RAW_IMU)  #a = accelerometer, g = gyroscope
         #attitude = board.getData(MultiWii.ATTITUDE)
@@ -32,8 +32,8 @@ for i in range(100):
     p1.set(title='Gyroscope data')
     p2.plot(plot_x, plot_y2)
     p2.set(title='Accelerometer data')
-    plt.pause(0.25)
-    time.sleep(0.05)
+    plt.pause(0.05)
+    #time.sleep(0.05)
 
     """print("Gyro:",gyro,"Accelerometer:",acc)
     t = time.time() - inittime
@@ -43,9 +43,9 @@ for i in range(100):
     plt.cla()
     plt.pause(0.25)"""
 
-plt.show()
+#plt.show()
 
-with open('pmw_log.csv', mode='w') as log:
+with open('pmw_log.csv', mode='w', newline='') as log:
     logwriter = csv.writer(log)
     for i in range(len(plot_x)):
         logwriter.writerow([i, plot_x[i], plot_y1[i]])
