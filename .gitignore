@@ -1,2 +1,4 @@
 #ignore log file
 pmw_log.csv
+
+#use git rm --cached FILENAME to remove folders/files from git

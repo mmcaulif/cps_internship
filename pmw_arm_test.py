@@ -4,9 +4,13 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 
-serialPort = "com3"
+serialPort = "com5"
 board = MultiWii(serialPort)
 assert board != 1, "There's something wrong with the serial connection... check the logfile!"
+
+"""data = [255,255,255,255,0,0,0,0]
+att = board.sendCMDreceiveATT(15,MultiWii.SET_RAW_RC,data)
+print(att)"""
 
 board.arm()
 print ("Board is armed now!")
