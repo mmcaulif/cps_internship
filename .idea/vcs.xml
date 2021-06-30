@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/WiiProxy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WiiProxy/dronekit-python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/YAMSPy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pyMultiWii" vcs="Git" />
   </component>

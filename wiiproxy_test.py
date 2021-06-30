@@ -2,7 +2,7 @@
 from os import system
 from serial import Serial
 import time
-from WiiProxy import MultiWii, Commands, Priority
+from WiiProxy import MultiWii, Commands
 
 serial = Serial("com5", 115200)
 time.sleep(6)
