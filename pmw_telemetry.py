@@ -7,7 +7,7 @@ from matplotlib.animation import FuncAnimation
 
 inittime = time.time()
 plot_x, plot_y1, plot_y2 = [], [], []
-serialPort = "com3"
+serialPort = "com5"
 board = MultiWii(serialPort)
 assert board != 1, "There's something wrong with the serial connection... check the logfile!"
 

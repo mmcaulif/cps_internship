@@ -1,4 +1,7 @@
 #ignore log file
 pmw_log.csv
+WiiProxy/
+YAMSPy/
+pyMultiWii/
 
 #use git rm --cached FILENAME to remove folders/files from git

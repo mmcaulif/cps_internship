@@ -4,7 +4,7 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 
-serialPort = "com3"
+serialPort = "com7"
 board = MultiWii(serialPort)
 assert board != 1, "There's something wrong with the serial connection... check the logfile!"
 
