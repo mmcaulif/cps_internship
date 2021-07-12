@@ -14,7 +14,12 @@ while True:
     total_data.append(checksum)
     try:
         b = None
-        b = ser.write(struct.pack('<3c2B' + '' + 'B', *total_data))
+        b = struct.pack('<3c2B' + '' + 'B', *total_data)
+        print(b)
+        b = ser.write('$M<\x00ff'.encode('utf-8'))
+        #b = ser.write(b'$M<\x00ff')
+        print("Bytes written: ",b)
+
     except Exception as error:
         print("\n\nError in sendCMD.")
         print("(" + str(error) + ")\n\n")
@@ -23,7 +28,7 @@ while True:
     while True:
         try:
             header = 0
-            header = ser.read().decode('utf-8').strip()
+            header = ser.read().decode('utf-8')
         except:
             print("error")
 
@@ -35,6 +40,9 @@ while True:
     datalength = struct.unpack('<b', ser.read())[0]
     code = struct.unpack('<b', ser.read())
     data = ser.read(datalength)
+    #data = ser.readline(18)
+
+    print("data: ", data)
 
     ser.flushInput()
     ser.flushOutput()

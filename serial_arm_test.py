@@ -13,7 +13,11 @@ for i in struct.pack('<2B' + '16B', *total_data[3:len(total_data)]):
     checksum = checksum ^ i
 total_data.append(checksum)
 print(total_data)
-b = ser.write(struct.pack('<3c2B' + '16B' + 'B', *total_data))
+
+b = struct.pack('<3c2B' + '16B' + 'B', *total_data)
+print(b)
+b = ser.write(b)
+
 
 print("Waiting 3 secs")
 time.sleep(3)
