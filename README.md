@@ -8,3 +8,7 @@ The first week involved mainly just experimentation with little to no tangible r
 I found a couple python libraries implementing a couple of the protocols but all were quite old and poorly documented, there was a lot of trial and error involved in experimenting with these libraries, most of which just didn't work for no apparent reason, and quite often gave no indication that there was even communication taking place making it quite difficult to debug. 
 
 Finally, one of the libraries (PyMultiWii) finally worked and successfully returned telemetry data (accelerometer and gyroscope) from the drone. This worked incredibly well and was the first tangible step towards creating the testbench for the drone by showing that we can in fact send commands to the drone without going through a flight configurator.
+
+
+## Week 2:
+Once the communication protocol was established and data could be read from the drone, the next step was to allow for a two way conversation between the drone and pc and to be able to send msp commands to the drone while tracking its location etc.
