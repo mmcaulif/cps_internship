@@ -9,6 +9,7 @@ I found a couple python libraries implementing a couple of the protocols but all
 
 Finally, one of the libraries (PyMultiWii) finally worked and successfully returned telemetry data (accelerometer and gyroscope) from the drone. This worked incredibly well and was the first tangible step towards creating the testbench for the drone by showing that we can in fact send commands to the drone without going through a flight configurator.
 
+---
 
 ## Week 2:
 Once the communication protocol was established and data could be read from the drone, the next step was to allow for a two way conversation between the drone and pc and to be able to send msp commands to the drone while tracking its location etc.
@@ -21,4 +22,7 @@ The end goal for the testbench would involve something like this:
 
 Unfortunately it became clear that I could not send RC commands to the drone (Serial RX cannot be swtitched on the usb port and is needef for these commands https://github.com/alduxvm/pyMultiWii/issues/36) thus we looked to alternative means to send commands to the drone through the UART ports (which we've confirmed are on the board).
 
+---
 
+## Week 5:
+From parsing the code given to us by Henning we have found that the arming message sent to the microbit is as follows " '\x00\x01\x02\x00\x06\x00\x08\x00\x0e\x00\x13\xff\x14\x00\x18\x00'"
