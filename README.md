@@ -13,7 +13,12 @@ Finally, one of the libraries (PyMultiWii) finally worked and successfully retur
 ## Week 2:
 Once the communication protocol was established and data could be read from the drone, the next step was to allow for a two way conversation between the drone and pc and to be able to send msp commands to the drone while tracking its location etc.
 
-The end goal for the tesbench would involve something like this:
+The end goal for the testbench would involve something like this:
 * Send RC messages to the drone
 * Drone responds with telemetry data
 * Computer logs data and calculates relationship between rc commands and corresponding change in location/telemetry data
+* Calibrate controller and any other variable acting in the drone
+
+Unfortunately it became clear that I could not send RC commands to the drone (Serial RX cannot be swtitched on the usb port and is needef for these commands https://github.com/alduxvm/pyMultiWii/issues/36) thus we looked to alternative means to send commands to the drone through the UART ports (which we've confirmed are on the board).
+
+
