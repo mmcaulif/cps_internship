@@ -25,4 +25,4 @@ Unfortunately it became clear that I could not send RC commands to the drone (Se
 ---
 
 ## Week 5:
-From parsing the code given to us by Henning we have found that the arming message sent to the microbit is as follows " '\x00\x01\x02\x00\x06\x00\x08\x00\x0e\x00\x13\xff\x14\x00\x18\x00'"
+From parsing the code given to us by Henning we have found that the arming message sent to the microbit is as follows '\x00\x01\x02\x00\x06\x00\x08\x00\x0e\x00\x13\xff\x14\x00\x18\x00' 
