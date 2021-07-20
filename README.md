@@ -20,9 +20,11 @@ The end goal for the testbench would involve something like this:
 * Computer logs data and calculates relationship between rc commands and corresponding change in location/telemetry data
 * Calibrate controller and any other variable acting in the drone
 
-Unfortunately it became clear that I could not send RC commands to the drone (Serial RX cannot be swtitched on the usb port and is needef for these commands https://github.com/alduxvm/pyMultiWii/issues/36) thus we looked to alternative means to send commands to the drone through the UART ports (which we've confirmed are on the board).
+Unfortunately it became clear that I could not send RC commands to the drone (Serial RX cannot be switched on the usb port and is needed for these commands https://github.com/alduxvm/pyMultiWii/issues/36) thus we looked to alternative means to send commands to the drone through the UART ports (which we've confirmed are on the board).
 
 ---
 
 ## Week 5:
-From parsing the code given to us by Henning we have found that the arming message sent to the microbit is as follows '\x00\x01\x02\x00\x06\x00\x08\x00\x0e\x00\x13\xff\x14\x00\x18\x00' 
+From parsing the code given to us by Henning we have found that the arming message sent to the microbit is as follows: b'\x00\x01\x02\x00\x06\x00\x08\x00\x0e\x00\x13\xff\x14\x00\x18\x00' 
+
+Which is similar in format to the message sent by the pymultiwii arm program but its length and values are different which has me scratching my head.
